@@ -1,0 +1,12 @@
+.productCardContainer {
+  border: 2px double;
+  margin: 10px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: rgb(73, 81, 85);
+  color: wheat;
+}

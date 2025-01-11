@@ -1,0 +1,29 @@
+.navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+
+.logoB {
+  width: 50px;
+  height: 50px;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+}
+a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 25%;
+}
