@@ -1,14 +1,34 @@
 import { ProductCard } from "../../common/productCard/ProductCard";
 import "../ItemListContainer/ItemListContainer.css";
+import { products } from "../../../products";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 export const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+  const { name } = useParams();
+  useEffect(() => {
+    let productsFiltered = products.filter(
+      (elemento) => elemento.category === name
+    );
+    const getProducts = new Promise((resolve, reject) => {
+      resolve(!name ? products : productsFiltered);
+      reject("error");
+    });
+
+    getProducts
+      .then((response) => {
+        setItems(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [name]);
   return (
     <div className="itemContainer">
-      <h3>Nuestros Productos</h3>
-      <ProductCard saludo="Hola profe, este es un saludo!!!" />
-      <ProductCard nombre="Remeron B" precio="$30.000" talle="XXL" />
-      <ProductCard nombre="Musculosa B" precio="$15.000" talle="M" />
-      <ProductCard nombre="Rompe Viento B" precio="$50.000" talle="XL" />
-      <ProductCard nombre="Pantalon Baggy B" precio="75.000" talle="L" />
+      {items.map((elemento) => {
+        return <ProductCard key={elemento.id} {...elemento} />;
+      })}
     </div>
   );
 };
