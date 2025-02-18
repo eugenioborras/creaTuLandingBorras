@@ -1,5 +1,7 @@
 .productCardContainer {
-  border: 2px double;
+  border: 10px double;
+  border-color: gray;
+  border-radius: 25%;
   margin: 10px;
   padding: 10px;
   height: max-content;
@@ -9,6 +11,7 @@
   img {
     height: 200px;
     width: 200px;
+    border-radius: 25%;
   }
 }
 .title {

@@ -8,3 +8,7 @@ img {
   height: 300px;
   width: 300px;
 }
+
+.loadingContainer {
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 export let products = [
   {
-    id: "1",
+    //id: "1",
     title: "Remeron B",
     price: 30000,
     description: "100% Algodón, color negra con letra en blanco estampada",
@@ -10,7 +10,7 @@ export let products = [
     category: "Remeras",
   },
   {
-    id: "2",
+    //  id: "2",
     title: "Musuculosa B",
     price: 25000,
     description: "100% Algodón, color gris oscuro con letra blanca bordada",
@@ -20,7 +20,7 @@ export let products = [
     category: "Remeras",
   },
   {
-    id: "3",
+    //id: "3",
     title: "Rompe Viento B",
     price: 50000,
     description:
@@ -31,9 +31,9 @@ export let products = [
     category: "Camperas",
   },
   {
-    id: "4",
+    //id: "4",
     title: "Pantalon Baggy",
-    price: 60.0,
+    price: 60000,
     description: "Tela de jean denim, color azul con detalles desgastados",
     imageUrl:
       "https://res.cloudinary.com/dbjrlsprg/image/upload/v1737065570/BaggyB_lkeozk.jpg",
