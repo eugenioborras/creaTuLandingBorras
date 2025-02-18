@@ -1,5 +1,5 @@
 import { ProductCard } from "../../common/productCard/ProductCard";
-import "../ItemListContainer/ItemListContainer.css";
+import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { collection, getDocs, query, where } from "firebase/firestore";
