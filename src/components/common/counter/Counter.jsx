@@ -24,12 +24,12 @@ const Counter = ({ item }) => {
   };
   return (
     <div className="counterContainer">
-      <button onClick={sumar}>
-        <MdExposurePlus1 size="20px" />
-      </button>
-      <h2>Cantidad: {counter}</h2>
       <button onClick={restar}>
         <MdExposureNeg1 size="20px" />
+      </button>
+      <h2>Cantidad: {counter}</h2>
+      <button onClick={sumar}>
+        <MdExposurePlus1 size="20px" />
       </button>
       <button onClick={onAdd}>agregar al carrito</button>
     </div>
