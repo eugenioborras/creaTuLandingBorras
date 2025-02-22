@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+import "react-toastify/dist/ReactToastify.css";
+
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {

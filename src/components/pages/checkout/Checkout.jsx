@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
 import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
+import Grid from "@mui/material/Grid2";
 
 const Checkout = () => {
   const { cart, getTotalAmount, removeCart } = useContext(CartContext);
@@ -45,49 +46,67 @@ const Checkout = () => {
       {ticket ? (
         <h3>Tu comprobante es: {ticket}</h3>
       ) : (
-        <form onSubmit={comprar} className="checkContainer">
-          <TextField
-            margin="dense"
-            label="Outlined"
-            type="text"
-            placeholder="Nombre"
-            name="nombre"
-            onChange={capturarDatos}
-            size="small"
-          />
-          <TextField
-            margin="dense"
-            type="text"
-            placeholder="Telefono"
-            name="telefono"
-            onChange={capturarDatos}
-            size="small"
-          />
-          <TextField
-            margin="dense"
-            type="text"
-            placeholder="E-mail"
-            name="email"
-            onChange={capturarDatos}
-            size="small"
-          />
-          <TextField
-            margin="dense"
-            type="text"
-            placeholder="Dirección"
-            name="direccion"
-            onChange={capturarDatos}
-            size="small"
-          />
-          <Button
-            variant="contained"
-            color="success"
-            size="small"
-            type="submit"
-          >
-            Comprar
-          </Button>
-        </form>
+        <Grid
+          container
+          rowSpacing={2}
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          display="flex"
+          justifyContent="center"
+        >
+          <form onSubmit={comprar}>
+            <Grid size={{ xs: 12, md: 15 }}>
+              <TextField
+                margin="dense"
+                type="text"
+                placeholder="Nombre"
+                name="nombre"
+                onChange={capturarDatos}
+                size="small"
+              />
+            </Grid>
+            <Grid size={{ xs: 12, md: 15 }}>
+              <TextField
+                margin="dense"
+                type="text"
+                placeholder="Telefono"
+                name="telefono"
+                onChange={capturarDatos}
+                size="small"
+              />
+            </Grid>
+            <Grid size={{ xs: 12, md: 15 }}>
+              <TextField
+                margin="dense"
+                type="text"
+                placeholder="E-mail"
+                name="email"
+                onChange={capturarDatos}
+                size="small"
+              />
+            </Grid>
+            <Grid size={{ xs: 12, md: 15 }}>
+              <TextField
+                margin="dense"
+                type="text"
+                placeholder="Dirección"
+                name="direccion"
+                onChange={capturarDatos}
+                size="small"
+              />
+            </Grid>
+            <Grid display="flex" justifyContent="center">
+              <Button
+                variant="contained"
+                color="success"
+                size="large"
+                type="submit"
+                margin="dense"
+              >
+                Comprar
+              </Button>
+            </Grid>
+          </form>
+        </Grid>
       )}
     </div>
   );
