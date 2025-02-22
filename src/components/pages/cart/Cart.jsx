@@ -28,7 +28,7 @@ export const Cart = () => {
               size="small"
               onClick={() => {
                 removeById(product.id);
-                toast.success("Producto Eliminado", {
+                toast.warning("Producto Eliminado", {
                   position: "bottom-right",
                   autoClose: 5000,
                   hideProgressBar: false,

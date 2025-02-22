@@ -8,7 +8,7 @@ import {
 
 import { IconButton, Button } from "@mui/material";
 import { IconContext } from "react-icons";
-import { toast, ToastContainer, Bounce } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Counter = ({ item }) => {
@@ -46,17 +46,6 @@ const Counter = ({ item }) => {
             color="success"
             onClick={() => {
               onAdd(); //
-              toast.success("Producto Agregado al Carrito", {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Bounce,
-              });
             }}
           >
             Agregar al Carrito

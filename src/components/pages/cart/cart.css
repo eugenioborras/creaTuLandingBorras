@@ -6,6 +6,7 @@
   background-color: black;
 }
 .tarjeta {
+  flex-flow: wrap;
   display: flex;
   align-items: center;
   border: 10px double;
