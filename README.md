@@ -1,8 +1,23 @@
-# React + Vite
+# Tienda de Indumentaria Masculina
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### E-comerce de facil uso, intuitivo en donde el cliente puede recorrer los diferentes porductos disponibles, seleccionarlos para visualizar sus detalles, agregar al carrito y realizar el checkout de la compra.
 
-Currently, two official plugins are available:
+## Tecnologias usadas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React js
+- Html
+- Css
+- Firebase
+- Vercel
+- Manejo de versiones con Git y Git-Hub
+
+### Frameworks y Librerias usadas.
+
+- Material UI
+- React-Router
+- React Icons
+- React Tostyfy
+
+#### Link al Deploy
+
+`<link>`: <https://crea-tu-landing-borras.vercel.app/>
