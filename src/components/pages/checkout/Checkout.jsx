@@ -42,71 +42,82 @@ const Checkout = () => {
     setUserInfo({ ...userInfo, [name]: value });
   };
   return (
-    <div>
+    <div className="contenedorCheck">
       {ticket ? (
         <h3>Tu comprobante es: {ticket}</h3>
       ) : (
-        <Grid
-          container
-          rowSpacing={2}
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          display="flex"
-          justifyContent="center"
-        >
-          <form onSubmit={comprar}>
-            <Grid size={{ xs: 12, md: 15 }}>
-              <TextField
-                margin="dense"
-                type="text"
-                placeholder="Nombre"
-                name="nombre"
-                onChange={capturarDatos}
-                size="small"
-              />
-            </Grid>
-            <Grid size={{ xs: 12, md: 15 }}>
-              <TextField
-                margin="dense"
-                type="text"
-                placeholder="Telefono"
-                name="telefono"
-                onChange={capturarDatos}
-                size="small"
-              />
-            </Grid>
-            <Grid size={{ xs: 12, md: 15 }}>
-              <TextField
-                margin="dense"
-                type="text"
-                placeholder="E-mail"
-                name="email"
-                onChange={capturarDatos}
-                size="small"
-              />
-            </Grid>
-            <Grid size={{ xs: 12, md: 15 }}>
-              <TextField
-                margin="dense"
-                type="text"
-                placeholder="Dirección"
-                name="direccion"
-                onChange={capturarDatos}
-                size="small"
-              />
-            </Grid>
-            <Grid display="flex" justifyContent="center">
-              <Button
-                variant="contained"
-                color="success"
-                size="large"
-                type="submit"
-                margin="dense"
-              >
-                Comprar
-              </Button>
-            </Grid>
-          </form>
-        </Grid>
+        <div>
+          <h3>Datos del Cliente:</h3>
+          <Grid
+            container
+            rowSpacing={2}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            display="flex"
+            justifyContent="center"
+            sx={{
+              backgroundColor: "black",
+              border: "2px solid white",
+            }}
+          >
+            <form onSubmit={comprar}>
+              <Grid size={{ xs: 12, md: 15 }}>
+                <TextField
+                  margin="dense"
+                  type="text"
+                  placeholder="Nombre"
+                  name="nombre"
+                  onChange={capturarDatos}
+                  size="small"
+                  sx={{ backgroundColor: "white" }}
+                />
+              </Grid>
+              <Grid size={{ xs: 12, md: 15 }}>
+                <TextField
+                  margin="dense"
+                  type="text"
+                  placeholder="Telefono"
+                  name="telefono"
+                  onChange={capturarDatos}
+                  size="small"
+                  sx={{ backgroundColor: "white" }}
+                />
+              </Grid>
+              <Grid size={{ xs: 12, md: 15 }}>
+                <TextField
+                  margin="dense"
+                  type="text"
+                  placeholder="E-mail"
+                  name="email"
+                  onChange={capturarDatos}
+                  size="small"
+                  sx={{ backgroundColor: "white" }}
+                />
+              </Grid>
+              <Grid size={{ xs: 12, md: 15 }}>
+                <TextField
+                  margin="dense"
+                  type="text"
+                  placeholder="Dirección"
+                  name="direccion"
+                  onChange={capturarDatos}
+                  size="small"
+                  sx={{ backgroundColor: "white" }}
+                />
+              </Grid>
+              <Grid display="flex" justifyContent="center">
+                <Button
+                  variant="contained"
+                  color="success"
+                  size="large"
+                  type="submit"
+                  margin="dense"
+                >
+                  Comprar
+                </Button>
+              </Grid>
+            </form>
+          </Grid>
+        </div>
       )}
     </div>
   );
